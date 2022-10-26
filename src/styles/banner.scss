@@ -1,0 +1,39 @@
+// .kaza__logo {
+//     width: 215px;
+//     height: 68px;
+//     margin: 20px 0 0 20px;
+// }
+.kaza__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &__logo {
+        width: 215px;
+        height: 68px;
+        margin: 20px 0 0 20px;
+    }
+
+    &__links>.kaza__nav__links_link {
+        margin: 0 30px 0 0;
+        color: #FF6060;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+    }
+}
+// .kaza_link {
+//     margin: 0 30px 0 0;
+//     color: #FF6060;
+//     font-weight: bold;
+//     text-decoration: none;
+//     &:hover{
+//         text-decoration: underline;
+//     }
+    
+// }
