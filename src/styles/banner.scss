@@ -1,13 +1,12 @@
-// .kaza__logo {
-//     width: 215px;
-//     height: 68px;
-//     margin: 20px 0 0 20px;
-// }
+
 .kaza__nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 30px;
+    width: 90%;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
 
     &__logo {
         width: 215px;

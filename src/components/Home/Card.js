@@ -1,16 +1,19 @@
 import {homes} from '../../datas/List';
 import '../../styles/card.scss'
+import { useNavigate } from 'react-router-dom';
 
-function handleClick(plantName) {
-    alert(`Vous voulez acheter 1 ${plantName} ? Très bon choix 🌱✨`)
-}
+
 
 // retourne les cartes de logement
 function Card() {
+    let navigate = useNavigate();
+    const initId = (id) =>{
+        navigate('/product/' + id)
+    }
     return (
         <ul>
             {homes.map(({ id, title, cover }) => (
-                <li key={id} className='kaza__flat' onClick={() => handleClick(title)}>
+                <li key={id} className='kaza__flat' onClick={() => initId(id)}>
                     <img className='kaza__flat__image' src={cover} alt={`${title} cover`} />
                     <div className='kaza__flat__title'>
                     {title}

@@ -1,0 +1,42 @@
+.kaza__shapping{
+    
+    width: 100%
+}
+.kaza__collapse{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #FF6060;
+    border-radius: 5px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    &__title{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 15px;
+        color: white;
+        font-size: 11px;
+        & img{
+            height: 10px;
+            padding-right: 15px;
+        }
+    }
+    &__text{
+        height: 0;
+        overflow: hidden;
+    }
+    &__textOpen{
+        height: auto;
+        width: 100%;
+        border-radius: 0 0 4px 4px;
+        padding: 20px 0 10px 15px;
+        background-color: #F7F7F7;
+        color: #FF6060;
+        font-size: 18px;
+    }
+}
+

@@ -1,16 +1,16 @@
 import Banner from '../Nav/Banner';
-import Survey from './ProductItem';
 import Footer from '../Footer/Footer';
+import ErrorText from './ErrorText';
 
-// affiche un logement 
-function ProductPage() {
+
+function ErrorPage() {
     return <div>
         
         <Banner />
-        <Survey />
+        <ErrorText />
         <Footer />
 
         </div>
 }
 
-export default ProductPage
+export default ErrorPage

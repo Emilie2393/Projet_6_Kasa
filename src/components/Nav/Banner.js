@@ -7,8 +7,8 @@ function Banner() {
     <div className="kaza__nav">
         <img className='kaza__nav__logo' src={logo} alt={"logo"} />
         <div className="kaza__nav__links">
-            <Link to="" className='kaza__nav__links_link'>Accueil</Link>
-            <Link to="" className='kaza__nav__links_link'>A propos</Link>
+            <Link to="/" className='kaza__nav__links_link'>Accueil</Link>
+            <Link to="/api/about" className='kaza__nav__links_link'>A propos</Link>
         </div>
 
     </div>)

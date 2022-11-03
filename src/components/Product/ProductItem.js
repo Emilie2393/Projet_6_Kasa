@@ -1,25 +1,33 @@
+import { useParams } from "react-router-dom";
+import {homes} from '../../datas/List'
 
-import CareScale from '../CareScale'
-import '../../styles/productitem.css'
 
+function ProductItem() {
+    const { id } = useParams()
+    const donne = homes.filter(data => data.id === (id))
 
-function handleClick(plantName) {
-    alert(`Vous voulez acheter 1 ${plantName} ? Très bon choix 🌱✨`)
+    return (
+        <div>
+        {donne.map(({ id, title, cover, description, rating }) => (
+            <div key={id} className='kaza__product' >
+                <img className='kaza__product__image' src={cover} alt={`${title} cover`} />
+                <div className='kaza__product__title'>
+                {title}
+                </div>
+                <div className='kaza__product__description'>
+                {description}
+                </div>
+                <div className='kaza__product__rating'>
+                {rating}
+                </div>
+            </div>
+        ))
+        }</div>
+
+    )
+    
+    
 }
-
-function ProductItem({ id, cover, title, water, light }) {
-	return (
-		<li key={id} onClick={() => handleClick(title)}>
-			<img className='kaza-flat-item-cover' src={cover} alt={`${title} cover`} />
-			{title}
-			<div>
-				<CareScale scaleValue={water} careType='water' />
-				<CareScale scaleValue={light} careType='light' />
-			</div>
-		</li>
-	)
-}
-
-
-
+ 
 export default ProductItem
+
