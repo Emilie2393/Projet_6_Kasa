@@ -1,0 +1,41 @@
+
+.kaza__slides{
+    width: 90%;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    flex-grow: 1;
+    &__pictures {
+        & img{
+            object-position:bottom;
+            width: 100%;
+        }
+        
+        
+    }
+    &__vectorleft{
+        & img{
+            width: 30px;
+            position: absolute;
+            transform: translate(0, -50%);
+            top: 50%;
+            cursor: pointer;
+            left: 10px;
+
+        }
+    }
+    &__vectorright{
+        & img{
+            width: 30px;
+            position: absolute;
+            transform: translate(0, -50%);
+            top: 50%;
+            cursor: pointer;
+            right: 10px;
+        }
+    }
+}
+    
+

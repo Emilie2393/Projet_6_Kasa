@@ -15,7 +15,10 @@ function AboutPage() {
         
         <Banner />
         <Picture pic={image_about} />
-        <Collapse data={About_data}/>
+        <Collapse title={About_data[0].title} text={About_data[0].text}/>
+        <Collapse title={About_data[1].title} text={About_data[1].text}/>
+        <Collapse title={About_data[2].title} text={About_data[2].text}/>
+        <Collapse title={About_data[3].title} text={About_data[3].text}/>
         <Footer />
 
         </div>

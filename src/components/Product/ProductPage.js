@@ -1,5 +1,5 @@
 import Banner from '../Nav/Banner';
-import Survey from './ProductItem';
+import ProductItem from './ProductItem';
 import Footer from '../Footer/Footer';
 
 // affiche un logement 
@@ -7,7 +7,7 @@ function ProductPage() {
     return <div>
         
         <Banner />
-        <Survey />
+        <ProductItem />
         <Footer />
 
         </div>
