@@ -10,6 +10,8 @@ const Flex = styled.div`
     flexwrap: wrap;
 `
 
+
+
 function ProductItem() {
     const { id } = useParams()
     const donne = homes.filter(data => data.id === (id))
@@ -17,12 +19,12 @@ function ProductItem() {
 
     return (
         <div>
-        {donne.map(({ id, title, cover, rating, description, equipments, pictures }) => (
-            <div key={id}>
+        {donne.map(({ id, title, cover, rating, description, equipments, pictures, location, tags }) => (
+            <div key={id} className="kaza__product">
                 <PicturesSlide pictures = {pictures}/>
-                <div className='kaza__product__title'>
-                {title}
-                </div>
+                <div className='kaza__product__title'>{title}</div>
+                <div className="kaza__product__location">{location}</div>
+                <div className="kaza__product__tags">{tags.map((tag) => <span>{(tag)}</span>)}</div>
                 <div className='kaza__product__rating'>
                 {rating}
                 </div>

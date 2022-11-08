@@ -1,16 +1,15 @@
 .kaza__shapping{
+    width: 100%;
     
-    width: 100%
 }
 .kaza__collapse{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     background-color: #FF6060;
+    width: 80%;
     border-radius: 5px;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     margin-bottom: 30px;
     &__title{
         width: 100%;
