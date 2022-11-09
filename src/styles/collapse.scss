@@ -1,16 +1,13 @@
-.kaza__shapping{
-    width: 100%;
-    
-}
+
 .kaza__collapse{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     background-color: #FF6060;
-    width: 80%;
+    width: 100%;
     border-radius: 5px;
-    margin: 0 auto;
     margin-bottom: 30px;
+    cursor: pointer;
     &__title{
         width: 100%;
         display: flex;
@@ -29,7 +26,7 @@
         overflow: hidden;
     }
     &__textOpen{
-        min-height: 95px;
+        min-height: 80px;
         width: 100%;
         border-radius: 0 0 4px 4px;
         padding: 20px 0 20px 10px;

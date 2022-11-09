@@ -1,7 +1,6 @@
 
 .kaza__slides{
-    min-height: 300px;
-    max-height: 500px;
+    height: 415px;
     border-radius: 15px;
     overflow: hidden;
     margin: 0 auto;
@@ -10,7 +9,6 @@
     &__pictures {
         & img{
             width: 100%;
-            min-height: 300px;
             
         }
         
