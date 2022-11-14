@@ -25,8 +25,6 @@ const Flex = styled.div`
 
 
 function AboutPage() {
-   
-    
 
     return <div> 
 

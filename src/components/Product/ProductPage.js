@@ -8,14 +8,23 @@ const Width = styled.div`
     margin: 0 auto;
 `
 
+const Minheight = styled.div`
+    min-height: 100vh;
+    display: flex;
+    flex-wrap:wrap;
+
+`
+
 // affiche un logement 
 function ProductPage() {
     return <div>
+        <Minheight>
         <Width>
         <Banner />
         <ProductItem />
         </Width>
         <Footer />
+        </Minheight>
 
         </div>
 }
