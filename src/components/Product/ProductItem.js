@@ -1,10 +1,11 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import {homes} from '../../datas/List';
 import Collapse from "../About/Collapse";
 import styled from "styled-components";
 import "../../styles/productitem.scss";
 import PicturesSlide from "./PicturesSlide"
 import Rating from "./Rating"
+import { useEffect } from "react";
 
 
 const InfosFlex = styled.div`
@@ -26,25 +27,36 @@ const WidthCollapse = styled.div`
 `
 
 
-
-
-
-
 function ProductItem() {
-    const { id } = useParams()
-    const donne = homes.filter(data => data.id === (id))
+    let { id } = useParams()
+    const flatInfos = homes.filter(data => data.id === (id))
+    const idList = homes.map(data => data.id)
+    console.log("donne1", idList)
+    let navigate = useNavigate()
+
+    useEffect(() => {
+        const idSearch = idList.find((nb) => nb === id)
+        console.log(idSearch)
+        if (idSearch === undefined){
+            console.log("id", id)
+            console.log("donne2", idSearch)
+            navigate('*')
+        }
+    })
+
+   
     
 
     return (
         <div>
-        {donne.map(({ id, title, cover, rating, description, equipments, pictures, location, tags, host }) => (
+        {flatInfos.map(({ id, title, rating, description, equipments, pictures, location, tags, host }) => (
             <div key={id} className="kaza__product">
                 <PicturesSlide pictures = {pictures}/>
                 <InfosFlex>
                 <div>
                     <div className='kaza__product__title'>{title}</div>
                     <div className="kaza__product__location">{location}</div>
-                    <div className="kaza__product__tags">{tags.map((tag) => <span>{(tag)}</span>)}</div>
+                    <div className="kaza__product__tags">{tags.map((tag, index) => <span key={index}>{(tag)}</span>)}</div>
                 </div>
                 <div>
                     <div className="kaza__product__host">

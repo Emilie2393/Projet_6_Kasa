@@ -19,7 +19,7 @@ function Collapse(props) {
                         <div>{open === true ? <img src={vectorup} alt="flèche haut"/> :  <img src={vectordown} alt="flèche bas"/>}</div>
                     </div>
                     <div className={open === true ? "kaza__collapse__textOpen" : "kaza__collapse__text"}>
-                        <div>{textArray ? textArray.map((text) => <li>{(text)}</li>) : <span>{text}</span> }</div>
+                        <div>{textArray ? textArray.map((text) => <li key={text}>{(text)}</li>) : <span>{text}</span> }</div>
                     </div>
                 </div>   
         </div>

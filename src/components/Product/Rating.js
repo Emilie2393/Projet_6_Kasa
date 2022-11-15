@@ -8,7 +8,7 @@ function Rating(props){
     return (
         <div className='rating'>
         {rates.map((i) => 
-            props.rating >= i ? <img src={RedStar} alt='étoile rouge'/> : <img src={GreyStar} alt="étoile grise"/>)}
+            props.rating >= i ? <img src={RedStar} alt='étoile rouge' key={i}/> : <img src={GreyStar} alt="étoile grise" key={i}/>)}
         
         </div>
     )
