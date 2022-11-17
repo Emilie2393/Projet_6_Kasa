@@ -15,7 +15,7 @@ function Collapse(props) {
         <div className="kaza__shapping">
             <div className="kaza__collapse">
                     <div className="kaza__collapse__title" onClick={reveal}>
-                        <h2>{props.title}</h2>
+                        <h1>{props.title}</h1>
                         <div>{open === true ? <img src={vectorup} alt="flèche haut"/> :  <img src={vectordown} alt="flèche bas"/>}</div>
                     </div>
                     <div className={open === true ? "kaza__collapse__textOpen" : "kaza__collapse__text"}>

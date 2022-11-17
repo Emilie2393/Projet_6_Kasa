@@ -11,7 +11,7 @@ function Card() {
         navigate('/product/' + id)
     }
     return (
-        <ul>
+        <ul className='kaza__cards'>
             {homes.map(({ id, title, cover }) => (
                 <li key={id} className='kaza__flat' onClick={() => initId(id)}>
                     <img className='kaza__flat__image' src={cover} alt={`${title} cover`} />

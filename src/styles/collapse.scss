@@ -2,9 +2,7 @@
 .kaza__collapse{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     background-color: #FF6060;
-    width: 100%;
     border-radius: 5px;
     margin-bottom: 30px;
     cursor: pointer;
@@ -15,7 +13,10 @@
         align-items: center;
         padding-left: 15px;
         color: white;
-        font-size: 11px;
+            & h1{
+            font-weight: 400;
+            font-size: 1em;}
+        
         & img{
             height: 10px;
             padding-right: 15px;
@@ -27,14 +28,13 @@
     }
     &__textOpen{
         min-height: 80px;
+        font-weight: 400;
         width: 100%;
         border-radius: 0 0 4px 4px;
-        padding: 20px 0 20px 10px;
+        padding: 20px 15px 20px 15px;
         background-color: #F7F7F7;
         color: #FF6060;
-        font-size: 18px;
         list-style: none;
-        flex:1;
     }
 }
 

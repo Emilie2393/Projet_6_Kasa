@@ -4,35 +4,32 @@ import Collapse from "../About/Collapse";
 import styled from "styled-components";
 import "../../styles/productitem.scss";
 import PicturesSlide from "./PicturesSlide"
-import Rating from "./Rating"
+import Rating from "./ProductRating"
 import { useEffect } from "react";
 
 
 const InfosFlex = styled.div`
     display: flex;
     justify-content: space-between;
-
+    margin-top: 30px;
 `
 
 const Flex = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
-    
+    margin-bottom: 40px
 `
 
 const WidthCollapse = styled.div`
     width: 47%;
-
 `
 
-
 function ProductItem() {
-    let { id } = useParams()
+    const { id } = useParams()
     const flatInfos = homes.filter(data => data.id === (id))
     const idList = homes.map(data => data.id)
-    console.log("donne1", idList)
-    let navigate = useNavigate()
+    const navigate = useNavigate()
 
     useEffect(() => {
         const idSearch = idList.find((nb) => nb === id)
@@ -43,10 +40,7 @@ function ProductItem() {
             navigate('*')
         }
     })
-
-   
     
-
     return (
         <div>
         {flatInfos.map(({ id, title, rating, description, equipments, pictures, location, tags, host }) => (
@@ -77,10 +71,7 @@ function ProductItem() {
             </div>
         ))
         }</div>
-
     )
-    
-    
 }
  
 export default ProductItem

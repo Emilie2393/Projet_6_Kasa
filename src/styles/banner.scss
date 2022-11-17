@@ -2,36 +2,25 @@
 .kaza__nav {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
     justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto 30px auto;
 
     &__logo {
-        width: 215px;
+        width: 210px;
         height: 68px;
-        margin: 20px 0 0 0;
     }
 
-    &__links>.kaza__nav__links_link {
-        margin: 0 30px 0 0;
-        color: #FF6060;
-        font-weight: bold;
-        text-decoration: none;
-
+    &__links{
+        &__link{
+            color: #FF6060;
+            font-size: 22px;
+            text-decoration: none;
+            &:nth-child(1){
+                margin-right: 20px;
+            }
         &:hover {
             text-decoration: underline;
         }
-
+    }
     }
 }
-// .kaza_link {
-//     margin: 0 30px 0 0;
-//     color: #FF6060;
-//     font-weight: bold;
-//     text-decoration: none;
-//     &:hover{
-//         text-decoration: underline;
-//     }
-    
-// }

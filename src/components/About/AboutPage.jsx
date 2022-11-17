@@ -1,5 +1,5 @@
 import Banner from '../Nav/Banner';
-import Picture from '../Home/Picture';
+import Picture from '../Nav/Picture';
 import Footer from '../Footer/Footer';
 import image_about from '../../assets/aboutpic.png'
 import Collapse from './Collapse'
@@ -14,7 +14,9 @@ const Width = styled.div`
 
 const WidthCollapse = styled.div`
     width: 70%;
-    margin: 0 auto
+    margin: 0 auto;
+    margin-bottom: 60px;
+    font-size: 1.2em;
 `
 
 const Flex = styled.div`
@@ -34,10 +36,10 @@ function AboutPage() {
                 <Picture pic={image_about} />
             </Width>
             <WidthCollapse>
-                <Collapse title={About_data[0].title} text={About_data[0].text}/>
-                <Collapse title={About_data[1].title} text={About_data[1].text}/>
-                <Collapse title={About_data[2].title} text={About_data[2].text}/>
-                <Collapse title={About_data[3].title} text={About_data[3].text}/>
+                <ul>
+                    {About_data.map((collapse => ( 
+                        <Collapse key={collapse.index} title={collapse.title} text={collapse.text} />)))}
+                </ul>
             </WidthCollapse>
                 <Footer />
             </Flex>

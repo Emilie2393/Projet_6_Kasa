@@ -1,5 +1,5 @@
 import Banner from '../Nav/Banner';
-import Picture from './Picture';
+import Picture from '../Nav/Picture';
 import Footer from '../Footer/Footer';
 import Card from './Card'
 import image from '../../assets/IMG.png'

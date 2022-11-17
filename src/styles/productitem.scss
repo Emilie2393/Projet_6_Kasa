@@ -1,12 +1,13 @@
 .kaza__product{
     color: #FF6060;
+    font-weight: 500;
     &__title{
-        font-weight: bold;
-        font-size: 1.5em;
-        margin: 10px 0 10px;
+        font-size: 1.8em;
+        margin: 10px 0 5px;
     }
     &__location{
-        margin: 10px 0 10px;
+        margin-bottom: 10px;
+        
     }
     &__tags{
         margin: 20px 0 20px;
@@ -27,7 +28,6 @@
         &__name{
             display: flex;
             flex-direction: column;
-            font-weight: bold;
             margin-right: 15px;
         }
         & img{
