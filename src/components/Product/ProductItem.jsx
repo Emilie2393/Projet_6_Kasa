@@ -26,17 +26,19 @@ const WidthCollapse = styled.div`
 `
 
 function ProductItem() {
+    // récupérer l'id du logement dans l'url //
     const { id } = useParams()
+    // récupérer l'appartement dans la liste homes selon son id //
     const flatInfos = homes.filter(data => data.id === (id))
+    // récupérer tous les id de la liste homes pour les comparer //
     const idList = homes.map(data => data.id)
     const navigate = useNavigate()
 
     useEffect(() => {
+        // en cas de changement de l'id du produit dans l'URL affiche la page du produit ou redirige vers la page d'erreur //
         const idSearch = idList.find((nb) => nb === id)
-        console.log(idSearch)
         if (idSearch === undefined){
-            console.log("id", id)
-            console.log("donne2", idSearch)
+            // renvoie vers 404 //
             navigate('*')
         }
     })

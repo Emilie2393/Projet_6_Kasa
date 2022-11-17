@@ -15,7 +15,6 @@
         transition: transform .1s;
         border-radius: 10px;
         filter: brightness(70%);
-        
     }
     &__text{
         position: absolute;
@@ -25,8 +24,23 @@
         font-size: 2em;
         color: white;
         font-weight: bold;
+    }
+}
 
+
+@media only screen and (max-width: 375px) {
+    .kaza__head {
+        text-align: left;
+
+        > img {
+            height: 111px;
+        }
+        &__text{
+            left: 20px;
+            bottom: 30px;
+            font-size: 1.5em
+        }
+        
     }
 
-    
 }

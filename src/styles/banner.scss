@@ -24,3 +24,18 @@
     }
     }
 }
+
+
+@media only screen and (max-width: 375px) {
+    .kaza__nav {
+        &__logo {
+            width: 130px;
+            height: 40px;
+        }
+        &__links{
+            &__link{
+                font-size: 15px;
+            }
+        }
+    }
+}

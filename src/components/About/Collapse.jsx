@@ -6,9 +6,10 @@ import { useState } from 'react'
 function Collapse(props) {
     const textArray = props.textArray
     const text = props.text
+    // state du collapse par défaut fermé //
     const [open, isOpen] = useState(false)
-
-    const reveal = (i) =>{
+    // fonction qui change le state // 
+    const reveal = () =>{
         isOpen(!open)
     }
     return (
@@ -23,7 +24,6 @@ function Collapse(props) {
                     </div>
                 </div>   
         </div>
-        
     )
 }
 

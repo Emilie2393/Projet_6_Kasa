@@ -6,7 +6,7 @@ import image from '../../assets/IMG.png'
 import styled from 'styled-components';
 
 const Width = styled.div`
-    width: 80%;
+    width: 90%;
     margin: 0 auto
 `
 

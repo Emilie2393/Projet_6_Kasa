@@ -8,7 +8,6 @@
     margin-bottom: 40px;
     border-radius: 10px;
     justify-content: space-around;
-    
 }
 
 .kaza__flat{
@@ -28,8 +27,6 @@
         object-position: center;
         transition: transform .1s;
         opacity: 60%;
-        
-        
     }
     &__title{
         position: absolute;
@@ -38,7 +35,19 @@
         font-weight: bold;
         color: white;
     }
+}
 
-    
+@media only screen and (max-width: 375px) {
+    .kaza__cards {
+        background-color: white; 
+    }
 
+    .kaza__flat{
+        max-width: 100%;
+        margin: 0 0 30px 0;
+        height: 255px;
+        &__image{
+            height: 255px;
+        }
+    }
 }

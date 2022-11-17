@@ -8,12 +8,12 @@ import '../../styles/about.scss'
 import styled from "styled-components";
 
 const Width = styled.div`
-    width: 80%;
+    width: 90%;
     margin: 0 auto
 `
 
 const WidthCollapse = styled.div`
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     margin-bottom: 60px;
     font-size: 1.2em;

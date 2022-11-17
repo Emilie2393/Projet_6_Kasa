@@ -19,11 +19,12 @@ function PicturesSlide(props){
         setPicture(newPicture)
     }
 
+    // si il n'y a qu'une image les flèches disparaissent
     return(
         <div className="kaza__slides">
-            <div className = 'kaza__slides__pictures'><img src={props.pictures[picture]} alt="images de l'appartement" /></div>
-            <div className='kaza__slides__vectorleft'><img src={vectorleft} alt="flèche gauche" onClick={leftPictures}/></div>
-            <div className='kaza__slides__vectorright'><img src={vectorright} alt="flèche droite" onClick={rightPictures}/></div>
+            <div className =  'kaza__slides__pictures'><img src={props.pictures[picture]} alt="images de l'appartement" /></div>
+            <div className= {props.pictures.length <= 1 ? 'kaza__slides__hiddenvector' : 'kaza__slides__vectorleft'}><img src={vectorleft} alt="flèche gauche" onClick={leftPictures}/></div>
+            <div className= {props.pictures.length <= 1 ? 'kaza__slides__hiddenvector' : 'kaza__slides__vectorright'}><img src={vectorright} alt="flèche droite" onClick={rightPictures}/></div>
         </div>
         
     )
