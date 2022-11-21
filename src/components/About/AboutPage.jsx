@@ -36,7 +36,7 @@ function AboutPage() {
                 <Picture pic={image_about} />
             </Width>
             <WidthCollapse>
-                <ul>
+                <ul className='kaza__about__collapse'>
                     {About_data.map((collapse => ( 
                         <Collapse key={collapse.index} title={collapse.title} text={collapse.text} />)))}
                 </ul>

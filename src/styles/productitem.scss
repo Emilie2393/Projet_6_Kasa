@@ -1,3 +1,10 @@
+
+.kaza__infosflex{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
 .kaza__product{
     color: #FF6060;
     font-weight: 500;
@@ -14,8 +21,8 @@
             background-color: #FF6060;
             border-radius: 10px;
             color: white;
-            padding: 5px 20px;
-            margin-right: 10px;
+            padding: 3px 20px;
+            margin: 0 10px 10px 0;
             font-size: 0.8em;
         }
     }
@@ -34,4 +41,49 @@
             width: 64px;
         }
     }
+    &__collapse{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        &__width{
+            width: 47%;
+
+        }
+    }
+}
+
+
+@media only screen and (max-width: 375px) {
+    .kaza__infosflex{
+        flex-wrap: wrap;
+    }
+    .kaza__product{
+        &__tags{
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+            & span{
+                white-space: nowrap;
+            }
+        }
+        &__hostandrating{
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            
+        }
+        &__collapse{
+            flex-direction: column;
+            &__width{
+                width: 100%;
+            }
+        }
+    }
+
+
 }
