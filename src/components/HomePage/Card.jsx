@@ -1,4 +1,4 @@
-import {homes} from '../../datas/List';
+import List from '../../datas/List';
 import '../../styles/Card.scss'
 import { useNavigate } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ function Card() {
     }
     return (
         <ul className='kaza__cards'>
-            {homes.map(({ id, title, cover }) => (
+            {List.map(({ id, title, cover }) => (
                 <li key={id} className='kaza__flat' onClick={() => initId(id)}>
                     <img className='kaza__flat__image' src={cover} alt={`${title} cover`} />
                     <div className='kaza__flat__title'>

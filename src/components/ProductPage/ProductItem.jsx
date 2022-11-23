@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import {homes} from '../../datas/List';
+import List from '../../datas/List';
 import Collapse from "../PageComponents/Collapse";
 import "../../styles/ProductItem.scss";
 import Gallery from "./Gallery"
@@ -12,9 +12,9 @@ function ProductItem() {
     // récupère l'id du logement dans l'url //
     const { id } = useParams()
     // récupère l'appartement dans la liste homes selon son id //
-    const flatInfos = homes.filter(data => data.id === (id))
+    const flatInfos = List.filter(data => data.id === (id))
     // récupère tous les id de la liste homes pour les comparer et afficher une erreur si besoin //
-    const idList = homes.map(data => data.id)
+    const idList = List.map(data => data.id)
     const navigate = useNavigate()
 
     useEffect(() => {
