@@ -1,5 +1,5 @@
-import logo from '../../assets/LOGO_white.png'
-import '../../styles/footer.scss'
+import logo from '../../../assets/LOGO_white.png'
+import '../../../styles/Footer.scss'
 
 
 

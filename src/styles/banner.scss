@@ -13,7 +13,7 @@
     &__links{
         &__link{
             color: #FF6060;
-            font-size: 22px;
+            font-size: 20px;
             text-decoration: none;
             &:nth-child(1){
                 margin-right: 20px;
@@ -26,7 +26,7 @@
 }
 
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 900px) {
     .kaza__nav {
         &__logo {
             width: 130px;

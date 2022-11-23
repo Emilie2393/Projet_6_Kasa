@@ -1,5 +1,5 @@
-import Banner from '../Nav/Banner';
-import Footer from '../Footer/Footer';
+import Banner from '../PageComponents/Nav/Banner';
+import Footer from '../PageComponents/Footer/Footer';
 import ErrorText from './ErrorText';
 import styled from 'styled-components';
 

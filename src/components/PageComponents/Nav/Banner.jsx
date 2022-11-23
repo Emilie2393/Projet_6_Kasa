@@ -1,5 +1,5 @@
-import '../../styles/banner.scss'
-import logo from '../../assets/LOGO.png'
+import '../../../styles/Banner.scss'
+import logo from '../../../assets/LOGO.png'
 import { Link } from 'react-router-dom'
 
 function Banner() {

@@ -1,6 +1,6 @@
-import Banner from '../Nav/Banner';
+import Banner from '../PageComponents/Nav/Banner';
 import ProductItem from './ProductItem';
-import Footer from '../Footer/Footer';
+import Footer from '../PageComponents/Footer/Footer';
 import styled from 'styled-components';
 
 const Width = styled.div`
@@ -12,7 +12,6 @@ const Minheight = styled.div`
     min-height: 100vh;
     display: flex;
     flex-wrap:wrap;
-
 `
 
 // affiche un logement 

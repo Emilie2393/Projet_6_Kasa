@@ -1,5 +1,5 @@
 import {homes} from '../../datas/List';
-import '../../styles/card.scss'
+import '../../styles/Card.scss'
 import { useNavigate } from 'react-router-dom';
 
 

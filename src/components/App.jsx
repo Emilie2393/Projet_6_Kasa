@@ -1,7 +1,7 @@
-import HomePage from './Home/HomePage';
-import ProductPage from './Product/ProductPage';
-import AboutPage from './About/AboutPage';
-import ErrorPage from './Error/ErrorPage'
+import HomePage from './HomePage/HomePage';
+import ProductPage from './ProductPage/ProductPage';
+import AboutPage from './AboutPage/AboutPage';
+import ErrorPage from './ErrorPage/ErrorPage'
 import { Routes, Route } from "react-router-dom";
 
 

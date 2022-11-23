@@ -1,5 +1,5 @@
 
-import '../../styles/picture.scss'
+import '../../../styles/BannerPicture.scss'
 
 
 // Bandeau photo

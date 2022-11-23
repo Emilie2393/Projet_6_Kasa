@@ -1,24 +1,24 @@
 import { useNavigate, useParams } from "react-router-dom";
 import {homes} from '../../datas/List';
-import Collapse from "../About/Collapse";
-import "../../styles/productitem.scss";
-import PicturesSlide from "./PicturesSlide"
+import Collapse from "../PageComponents/Collapse";
+import "../../styles/ProductItem.scss";
+import Gallery from "./Gallery"
 import Rating from "./ProductRating"
 import { useEffect } from "react";
 
 
 
 function ProductItem() {
-    // récupérer l'id du logement dans l'url //
+    // récupère l'id du logement dans l'url //
     const { id } = useParams()
-    // récupérer l'appartement dans la liste homes selon son id //
+    // récupère l'appartement dans la liste homes selon son id //
     const flatInfos = homes.filter(data => data.id === (id))
-    // récupérer tous les id de la liste homes pour les comparer //
+    // récupère tous les id de la liste homes pour les comparer et afficher une erreur si besoin //
     const idList = homes.map(data => data.id)
     const navigate = useNavigate()
 
     useEffect(() => {
-        // en cas de changement de l'id du produit dans l'URL affiche la page du produit ou redirige vers la page d'erreur //
+        // en cas de changement de l'id du produit dans l'URL, affiche la page du bon produit ou redirige vers la page d'erreur //
         const idSearch = idList.find((nb) => nb === id)
         if (idSearch === undefined){
             // renvoie vers 404 //
@@ -30,10 +30,10 @@ function ProductItem() {
         <div>
         {flatInfos.map(({ id, title, rating, description, equipments, pictures, location, tags, host }) => (
             <div key={id} className="kaza__product">
-                <PicturesSlide pictures = {pictures}/>
-                <div className='kaza__infosflex'>
+                <Gallery pictures = {pictures}/>
+                <div className='kaza__product__flex'>
                 <div>
-                    <div className='kaza__product__title'>{title}</div>
+                    <h1 className='kaza__product__title'>{title}</h1>
                     <div className="kaza__product__location">{location}</div>
                     <div className="kaza__product__tags">{tags.map((tag, index) => <span key={index}>{(tag)}</span>)}</div>
                 </div>
