@@ -12,6 +12,8 @@ function Collapse({title, text, textArray}) {
     const reveal = () =>{
         isOpen(!open)
     }
+
+
     return (
         <div className="kaza__shapping">
             <div className="kaza__collapse">

@@ -1,30 +1,62 @@
 import { useNavigate, useParams } from "react-router-dom";
-import List from '../../datas/List';
 import Collapse from "../PageComponents/Collapse";
 import "../../styles/ProductItem.scss";
 import Gallery from "./Gallery"
 import Rating from "./ProductRating"
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+
+
+
+function Data(){
+    const [data, setData] = useState([])
+
+    let fetchdata = async() => {
+        const response = await fetch("http://localhost:3000/data/List.json")
+        const data = await response.json()
+        setData(data)
+        
+    }
+
+    useEffect(() => {
+        fetchdata()
+    }, [])
+    return data
+}
 
 
 
 function ProductItem() {
+    
+    const [data, setData] = useState([])
+
+    let fetchdata = async() => {
+        const response = await fetch("http://localhost:3000/data/List.json")
+        const data = await response.json()
+        setData(data)
+        
+    }
+
+    useEffect(() => {
+        fetchdata()
+    })
+    
     // récupère l'id du logement dans l'url //
     const { id } = useParams()
     // récupère l'appartement dans la liste homes selon son id //
-    const flatInfos = List.filter(data => data.id === (id))
+    const flatInfos = data.filter(flat => flat.id === (id))
     // récupère tous les id de la liste homes pour les comparer et afficher une erreur si besoin //
-    const idList = List.map(data => data.id)
-    const navigate = useNavigate()
-
-    useEffect(() => {
-        // en cas de changement de l'id du produit dans l'URL, affiche la page du bon produit ou redirige vers la page d'erreur //
-        const idSearch = idList.find((nb) => nb === id)
+    const idList = data.map(flat => flat.id)
+    
+    let navigate = useNavigate()
+    
+    const idSearch = idList.find((nb) => nb === id)
         if (idSearch === undefined){
             // renvoie vers 404 //
             navigate('*')
         }
-    })
+    
+
+    
     
     return (
         <div>
