@@ -56,6 +56,28 @@
     }
 }
 
+@keyframes roll {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & h1{
+        margin-bottom: 90px;
+    }
+    &__image{
+        animation: roll 3000ms;
+        height: 70px;
+    }
+}
+
 
 @media only screen and (max-width: 900px) {
    

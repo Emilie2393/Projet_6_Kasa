@@ -26,25 +26,28 @@ const Flex = styled.div`
 
 
 function AboutPage() {
-
-    return <div> 
-
-            <Flex>
-            <Width>
-                <Banner />
-                <Picture pic={image_about} />
-            </Width>
-            <WidthCollapse>
-                <ul className='kaza__about__collapse'>
-                    {About_data.map((collapse => ( 
-                        <Collapse key={collapse.title} title={collapse.title} text={collapse.text} />)))}
-                </ul>
-            </WidthCollapse>
-                <Footer />
-            </Flex>
-
-            </div>
-    
+  return (
+    <div>
+      <Flex>
+        <Width>
+          <Banner />
+          <Picture pic={image_about} />
+        </Width>
+        <WidthCollapse>
+          <ul className="kaza__about__collapse">
+            {About_data.map((collapse) => (
+              <Collapse
+                key={collapse.title}
+                title={collapse.title}
+                text={collapse.text}
+              />
+            ))}
+          </ul>
+        </WidthCollapse>
+        <Footer />
+      </Flex>
+    </div>
+  );
 }
 
 export default AboutPage
