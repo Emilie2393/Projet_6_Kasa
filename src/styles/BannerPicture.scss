@@ -28,6 +28,10 @@
 }
 
 
+.hidden{
+    visibility: hidden;
+}
+
 @media only screen and (max-width: 900px) {
     .kaza__head {
         text-align: left;

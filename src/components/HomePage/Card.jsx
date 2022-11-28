@@ -1,14 +1,12 @@
 import "../../styles/Card.scss";
 import { useNavigate } from "react-router-dom";
 import { useFetch } from "../PageComponents/Fetch";
-import styled from "styled-components";
+import { useEffect } from "react";
+import Logo from "../../assets/LOGO.png"
 
-const Minheight = styled.div`
-  min-height: 100vh;
-`;
 
 // retourne les cartes de logement
-function Card() {
+function Card({modifyPage}) {
   // récupère les données du fichier json //
   const { isLoading, data, error } = useFetch(
     `http://localhost:3000/data/List.json`
@@ -18,8 +16,16 @@ function Card() {
   const initId = (id) => {
     navigate("/product/" + id);
   };
-  // test //
-  console.log("data", data);
+
+  useEffect(() => {
+    // quand le chargement est terminé et que les data sont disponibles //
+    if (!isLoading) {
+      modifyPage(false)
+    }
+    else{
+      modifyPage(true)
+    }
+  });
 
   if (error) {
     return <span>Il y a un problème dans le composant fetch</span>;
@@ -27,9 +33,8 @@ function Card() {
   // si les données sont en chargement, affiche un message d'attente, puis la liste des logements //
   return isLoading ? (
     <div className="loading">
-      <Minheight>
         <h1>Les logements arrivent . . .</h1>
-      </Minheight>
+        <img className="loading__image" src ={Logo} alt="logo kasa" />
     </div>
   ) : (
     <ul className="kaza__cards">

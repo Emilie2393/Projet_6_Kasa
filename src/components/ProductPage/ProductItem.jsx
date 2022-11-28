@@ -6,15 +6,9 @@ import Rating from "./ProductRating"
 import { useEffect } from "react";
 import { useFetch } from "../PageComponents/Fetch";
 import Logo from "../../assets/LOGO.png"
-import styled from "styled-components";
 
 
-const Minheight = styled.div`
-    min-height: 100vh;
-`
-
-
-function ProductItem() {
+function ProductItem({modifyPage}) {
   // retour de useFetch à travers les constantes //
   const { isLoading, data, error } = useFetch(
     `http://localhost:3000/data/List.json`
@@ -35,7 +29,9 @@ function ProductItem() {
   useEffect(() => {
     // quand le chargement est terminé et que les data sont disponibles //
     if (!isLoading) {
-        console.log("coucou ça roule dans useeffect")
+      modifyPage(false)
+      // test //
+      console.log("page produit : useeffect")
       // en cas de changement de l'id du produit dans l'URL, affiche la page du bon produit ou redirige vers la page d'erreur //
       const idSearch = idList.find((nb) => nb === id);
       if (idSearch === undefined) {
@@ -43,19 +39,22 @@ function ProductItem() {
         navigate("*");
       }
     }
+    else{
+      // page modifiée pendant le chargement //
+      modifyPage(true)
+    }
   });
 
   if (error) {
     return <span>Il y a un problème dans le composant fetch</span>;
   }
 
+  // si les données chargent, affiche un message en attendant puis affiche le logement //
   return isLoading ? (
     
     <div className="loading">
-        <Minheight>
         <h1>Le logement arrive . . .</h1>
         <img className="loading__image" src ={Logo} alt="logo kasa" />
-        </Minheight>
     </div>
     
   ) : (
@@ -112,4 +111,5 @@ function ProductItem() {
 }
 
 export default ProductItem;
+
 

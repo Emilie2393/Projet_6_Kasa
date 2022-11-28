@@ -4,7 +4,6 @@
     list-style-type: none;
     background-color: #F6F6F6;    ;
     padding-inline-start: 0;
-    margin: auto;
     margin-bottom: 40px;
     border-radius: 10px;
     justify-content: space-around;
@@ -36,6 +35,34 @@
         color: white;
     }
 }
+
+@keyframes roll {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }
+  
+  .loading{
+    display: flex;
+    flex-direction: column;
+    
+    & h1{
+        font-size: 2.5em;
+        padding: 100px 0 200px 0;
+        margin: auto
+    }
+    &__image{
+        animation: roll 3000ms;
+        width: 15%;
+        margin: auto;
+    }
+  }
+
+
+
 
 @media only screen and (max-width: 900px) {
     .kaza__cards {

@@ -25,6 +25,11 @@
     }
 }
 
+.hidden{
+    visibility: hidden;
+    height: 0;
+}
+
 
 @media only screen and (max-width: 900px) {
     .kaza__nav {
