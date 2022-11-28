@@ -3,7 +3,7 @@ import Picture from '../PageComponents/Nav/BannerPicture';
 import Footer from '../PageComponents/Footer/Footer';
 import image_about from '../../assets/aboutpic.png'
 import Collapse from '../PageComponents/Collapse'
-import {About_data} from '../../datas/About'
+import {AboutText} from './AboutText'
 import styled from "styled-components";
 
 const Width = styled.div`
@@ -35,7 +35,7 @@ function AboutPage() {
         </Width>
         <WidthCollapse>
           <ul className="kaza__about__collapse">
-            {About_data.map((collapse) => (
+            {AboutText.map((collapse) => (
               <Collapse
                 key={collapse.title}
                 title={collapse.title}
