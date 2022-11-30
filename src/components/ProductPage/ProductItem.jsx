@@ -11,7 +11,7 @@ import Logo from "../../assets/LOGO.png"
 function ProductItem({modifyPage}) {
   // retour de useFetch à travers les constantes //
   const { isLoading, data, error } = useFetch(
-    `http://localhost:3000/data/List.json`
+    `../data/List.json`
   );
 
   // test //
@@ -46,7 +46,7 @@ function ProductItem({modifyPage}) {
   });
 
   if (error) {
-    return <span>Il y a un problème dans le composant fetch</span>;
+    return <p>Il y a un problème dans le composant fetch</p>;
   }
 
   // si les données chargent, affiche un message en attendant puis affiche le logement //

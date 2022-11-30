@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { useState } from 'react';
 
 const Width = styled.div`
+  min-height: 80vh;
   width: 90%;
   margin: 0 auto;
 `;
