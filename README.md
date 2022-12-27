@@ -1,5 +1,7 @@
 # Getting Started with KASA
 
+### Clone this repo 
+
 ### `npm start` or `yarn start` ###
 
 Runs the app in the development mode.\
