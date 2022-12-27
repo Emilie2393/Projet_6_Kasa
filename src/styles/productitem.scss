@@ -2,6 +2,7 @@
 .kaza__product{
     color: #FF6060;
     font-weight: 500;
+
     &__flex{
         display: flex;
         justify-content: space-between;
@@ -55,31 +56,6 @@
         }
     }
 }
-
-@keyframes roll {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-  }
-  
-  .loading{
-    display: flex;
-    flex-direction: column;
-    
-    & h1{
-        font-size: 2.5em;
-        padding: 100px 0 200px 0;
-        margin: auto
-    }
-    &__image{
-        animation: roll 3000ms;
-        width: 15%;
-        margin: auto;
-    }
-  }
 
 
 

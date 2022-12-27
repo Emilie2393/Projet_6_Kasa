@@ -36,14 +36,7 @@
     }
 }
 
-@keyframes roll {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-  }
+
   
   .loading{
     display: flex;
@@ -55,7 +48,6 @@
         margin: auto
     }
     &__image{
-        animation: roll 3000ms;
         width: 15%;
         margin: auto;
     }
