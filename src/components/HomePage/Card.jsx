@@ -19,6 +19,7 @@ function Card({modifyPage}) {
 
   useEffect(() => {
     // quand le chargement est terminé et que les data sont disponibles //
+    //nouveau commit
     if (!isLoading) {
       modifyPage(false)
     }
